@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".Loginpage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/log"
+            android:textStyle="bold"
+            android:textColorHint="#A81F1F"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:layout_margin="32dp"
+            />
+
+
+        <EditText
+            android:id="@+id/usernameinput"
+            android:layout_width="332dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/roundedcorner"
+            android:hint="@string/name"
+            android:inputType="text"
+            android:padding="18dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:autofillHints="" />
+
+
+        <EditText
+            android:id="@+id/passwordinput"
+            android:layout_width="332dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/roundedcorner"
+            android:hint="@string/pas"
+            android:inputType="textPassword"
+            android:padding="18dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="20sp"
+            android:autofillHints="" />
+
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="232dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/white"
+            android:padding="18dp"
+            android:text="@string/log"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/sinupredirecttext"
+            android:text="@string/soc1"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+
+            android:layout_margin="32dp"
+            />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+
+
+

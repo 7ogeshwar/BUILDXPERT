@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "943363623812",
+    "firebase_url": "https://pcbrother-dd507-default-rtdb.firebaseio.com",
+    "project_id": "pcbrother-dd507",
+    "storage_bucket": "pcbrother-dd507.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:943363623812:android:87dfb1b985c8b7a6a32bd1",
+        "android_client_info": {
+          "package_name": "com.example.buildxpert"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoQiFvM0crBXVf1_bq8pQYUIyNcZ7h9NM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
