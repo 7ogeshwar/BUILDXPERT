@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
+
     android:gravity="center"
     android:padding="16dp"
     tools:context=".MainActivity">
@@ -18,10 +18,10 @@
         android:layout_marginStart="45dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="45dp"
-        android:fontFamily="@font/anton"
+        android:fontFamily="@font/nicomoji"
         android:text="@string/home"
         android:textColor="#000000"
-        android:textSize="30dp" />
+        android:textSize="18dp" />
 
     <Button
         android:layout_width="209dp"
@@ -32,24 +32,9 @@
         android:layout_marginTop="650dp"
         android:layout_marginEnd="46dp"
         android:layout_marginBottom="5dp"
-        android:fontFamily="@font/aubrey"
+        android:backgroundTint="#000000"
+        android:fontFamily="@font/nicomoji"
         android:text="@string/GetStarted" />
-
-    <ScrollView
-        android:layout_width="395dp"
-        android:layout_height="715dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="32dp">
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
 
 
 </RelativeLayout>

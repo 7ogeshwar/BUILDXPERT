@@ -3,35 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg"
     android:gravity="center"
     android:padding="16dp"
     tools:context=".registerpage">
+
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
+        android:layout_marginTop="50dp"
         android:orientation="vertical"
         tools:ignore="UselessParent">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="35dp"
-            android:fontFamily="@font/allerta"
-            android:text="@string/reg"
-            android:textColor="#000000"
-            android:textColorHint="#AFAFAF"
-            android:textSize="25sp"
-            android:textStyle="bold" />
 
-        <ImageView
-            android:layout_width="160dp"
-            android:layout_height="160dp"
-            android:src="@drawable/iconlogin" />
+
+
+
 
 
         <EditText
@@ -41,25 +34,29 @@
             android:layout_marginTop="32dp"
             android:autofillHints=""
             android:background="@drawable/roundedcorner"
+            android:backgroundTint="#4DD9F8"
             android:hint="@string/name"
             android:inputType="textEmailAddress"
             android:padding="18dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/nicomoji"
             android:textSize="20sp" />
 
         <EditText
             android:id="@+id/email"
             android:layout_width="332dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="16dp"
             android:autofillHints=""
             android:background="@drawable/roundedcorner"
             android:hint="@string/EMAIL"
             android:inputType="textEmailAddress"
+            android:backgroundTint="#4DD9F8"
             android:padding="18dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/nicomoji"
             android:textSize="20sp" />
 
 
@@ -73,20 +70,22 @@
             android:hint="@string/pas"
             android:inputType="textPassword"
             android:padding="18dp"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColor="@color/ic_launcher_background"
+            android:textColorHint="@color/black"
+            android:fontFamily="@font/nicomoji"
+            android:backgroundTint="#4DD9F8"
             android:textSize="20sp" />
 
         <Button
             android:id="@+id/registerbutton"
             android:layout_width="187dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@color/white"
-            android:fontFamily="@font/anton"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="#8AF436"
             android:padding="18dp"
             android:text="@string/reg"
             android:textColor="#000000"
+            android:fontFamily="@font/nicomoji"
             android:textSize="20sp" />
 
         <TextView
@@ -95,9 +94,23 @@
             android:layout_height="36dp"
             android:layout_margin="32dp"
             android:text="@string/soc"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
+            android:fontFamily="@font/nicomoji"
 
-            android:textSize="18sp" />
+
+        android:textSize="18sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="263dp"
+        android:layout_height="111dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/reglogo"
+        android:orientation="horizontal">
 
 
     </LinearLayout>
