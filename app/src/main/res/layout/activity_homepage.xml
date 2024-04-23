@@ -17,42 +17,66 @@
 
 
 
-        <androidx.appcompat.widget.Toolbar
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            android:backgroundTint="@color/black"/>
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/fragmentcontainer">
 
 
-        </FrameLayout>
-        <androidx.coordinatorlayout.widget.CoordinatorLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <com.google.android.material.bottomappbar.BottomAppBar
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:id="@+id/bottomappbar"
-                app:fabCradleMargin="10dp"
-                app:fabCradleRoundedCornerRadius="50dp"
-                android:backgroundTint="@color/black">
-                <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_height="match_parent">
+
+                <com.google.android.material.bottomappbar.BottomAppBar
+                    android:id="@+id/bottomappbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:backgroundTint="@color/black"
+                    app:fabCradleMargin="10dp"
+                    app:fabCradleRoundedCornerRadius="50dp">
+
+                    <com.google.android.material.bottomnavigation.BottomNavigationView
+                        android:id="@+id/bottomnavigation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        app:labelVisibilityMode="labeled"
+                        app:menu="@menu/bottomnavigation">
+
+                    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+                </com.google.android.material.bottomappbar.BottomAppBar>
+
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:labelVisibilityMode="labeled"
+                    android:id="@+id/userdetails"
+                    android:text="welcome"
+                    android:layout_marginLeft="330dp"
+                    android:layout_marginTop="90dp"
+                    android:fontFamily="@font/nicomoji"
 
-                    app:menu="@menu/bottomnavigation"
-                    android:background="@android:color/transparent">
-
-                </com.google.android.material.bottomnavigation.BottomNavigationView>
+                    />
 
 
-            </com.google.android.material.bottomappbar.BottomAppBar>
+                <Button
+                    android:id="@+id/logout"
+                    android:layout_width="92dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="320dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#5C5C5C"
+                    android:fontFamily="@font/nicomoji"
+                    android:padding="18dp"
+                    android:text="@string/logout"
+                    android:textColor="#000000"
+                    android:textSize="10sp" />
 
-        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+        </FrameLayout>
 
     </RelativeLayout>
 

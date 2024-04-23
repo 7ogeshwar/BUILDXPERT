@@ -24,26 +24,7 @@
 
 
 
-
-
-
-        <EditText
-            android:id="@+id/username"
-            android:layout_width="332dp"
-            android:layout_height="match_parent"
-            android:layout_marginTop="32dp"
-            android:autofillHints=""
-            android:background="@drawable/roundedcorner"
-            android:backgroundTint="#4DD9F8"
-            android:hint="@string/name"
-            android:inputType="textEmailAddress"
-            android:padding="18dp"
-            android:textColor="@color/black"
-            android:textColorHint="@color/black"
-            android:fontFamily="@font/nicomoji"
-            android:textSize="20sp" />
-
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email"
             android:layout_width="332dp"
             android:layout_height="match_parent"
@@ -60,7 +41,7 @@
             android:textSize="20sp" />
 
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password"
             android:layout_width="332dp"
             android:layout_height="match_parent"
@@ -75,6 +56,11 @@
             android:fontFamily="@font/nicomoji"
             android:backgroundTint="#4DD9F8"
             android:textSize="20sp" />
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressbar"
+            android:visibility="gone"/>
 
         <Button
             android:id="@+id/registerbutton"

@@ -16,13 +16,14 @@
         tools:ignore="UselessParent">
 
 
-        <EditText
-            android:id="@+id/usernameinput"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
             android:layout_width="332dp"
             android:layout_height="match_parent"
             android:layout_marginTop="80dp"
             android:background="@drawable/roundedcorner"
-            android:hint="@string/name"
+
+            android:hint="@string/EMAIL"
             android:inputType="text"
             android:padding="18dp"
             android:textColor="@color/white"
@@ -32,7 +33,7 @@
             android:autofillHints="" />
 
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/passwordinput"
             android:layout_width="332dp"
             android:layout_height="match_parent"
@@ -48,6 +49,14 @@
             android:textSize="20sp"
             android:autofillHints="" />
 
+
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressbar"
+            android:visibility="gone"/>
         <Button
             android:id="@+id/loginbutton"
             android:layout_width="232dp"
