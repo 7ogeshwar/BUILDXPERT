@@ -88,8 +88,10 @@ public class registerpage extends AppCompatActivity {
                         .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                progresbar.setVisibility(View.GONE);
                                 if (task.isSuccessful()) {
-                                    progresbar.setVisibility(View.GONE);
+
+                                    //FirebaseUser user = mAuth.getCurrentUser();
                                     Toast.makeText(registerpage.this, "Account created",
                                             Toast.LENGTH_SHORT).show();
 
