@@ -84,7 +84,7 @@
             android:fontFamily="@font/nicomoji"
 
 
-        android:textSize="18sp" />
+            android:textSize="18sp" />
 
 
     </LinearLayout>

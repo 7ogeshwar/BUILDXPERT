@@ -1,0 +1,250 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".anime">
+
+    <!-- Header TextView -->
+    <TextView
+        android:id="@+id/animation_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/animation"
+        android:textSize="56dp"
+        android:fontFamily="@font/nicomoji"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/animation_text">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <Button
+                android:id="@+id/btnFadeIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Fade In" />
+
+            <TextView
+                android:id="@+id/txt_fade_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnFadeIn"
+                android:layout_marginTop="5dp"
+                android:text="Fade In"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btnFadeOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_fade_in"
+                android:layout_margin="5dp"
+                android:text="Fade Out" />
+
+            <TextView
+                android:id="@+id/txt_fade_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnFadeOut"
+                android:layout_marginTop="5dp"
+                android:text="Fade Out"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btnCrossFade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_fade_out"
+                android:layout_margin="5dp"
+                android:text="Cross Fade" />
+
+            <TextView
+                android:id="@+id/txt_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnCrossFade"
+                android:layout_marginTop="5dp"
+                android:text="Cross Fade In"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnBlink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_out"
+                android:layout_margin="5dp"
+                android:text="Blink" />
+
+            <TextView
+                android:id="@+id/txt_blink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnBlink"
+                android:layout_marginTop="5dp"
+                android:text="Blink"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btnZoomIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_blink"
+                android:layout_margin="5dp"
+                android:text="Zoom In" />
+
+            <TextView
+                android:id="@+id/txt_zoom_in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnZoomIn"
+                android:layout_marginTop="5dp"
+                android:text="Zoom In"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btnZoomOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_zoom_in"
+                android:layout_margin="5dp"
+                android:text="Zoom Out" />
+
+            <TextView
+                android:id="@+id/txt_zoom_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnZoomOut"
+                android:layout_marginTop="5dp"
+                android:text="Zoom Out"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btnRotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_zoom_out"
+                android:layout_margin="5dp"
+                android:text="Rotate" />
+
+            <TextView
+                android:id="@+id/txt_rotate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnRotate"
+                android:layout_marginTop="5dp"
+                android:text="Rotate"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btnMove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_rotate"
+                android:layout_margin="5dp"
+                android:text="Move" />
+
+            <TextView
+                android:id="@+id/txt_move"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnMove"
+                android:layout_marginTop="5dp"
+                android:text="Move"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btnSlideUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_move"
+                android:layout_margin="5dp"
+                android:text="Slide Up" />
+
+            <TextView
+                android:id="@+id/txt_slide_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnSlideUp"
+                android:layout_marginTop="5dp"
+                android:text="Slide Up"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btnSlideDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_slide_up"
+                android:layout_margin="5dp"
+                android:text="Slide Down" />
+
+            <TextView
+                android:id="@+id/txt_slide_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnSlideDown"
+                android:layout_marginTop="5dp"
+                android:text="Slide Down"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btnBounce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_slide_down"
+                android:layout_margin="5dp"
+                android:text="Bounce" />
+
+            <TextView
+                android:id="@+id/txt_bounce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnBounce"
+                android:layout_marginTop="5dp"
+                android:text="Bounce"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btnSequential"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_bounce"
+                android:layout_margin="5dp"
+                android:text="Sequential Animation" />
+
+            <TextView
+                android:id="@+id/txt_seq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnSequential"
+                android:layout_marginTop="5dp"
+                android:text="Sequential"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/btnTogether"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_seq"
+                android:layout_margin="5dp"
+                android:text="Together Animation" />
+
+            <TextView
+                android:id="@+id/txt_tog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btnTogether"
+                android:layout_marginTop="5dp"
+                android:text="Together"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,5 +1,6 @@
 package com.example.buildxpert;
 
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -16,6 +17,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.Firebase;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,9 +26,9 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class registerpage extends AppCompatActivity {
 
-    EditText email,password;
+    TextInputEditText email,password;
     TextView login_redirecttext;
-    Button butreg;
+    Button registerbutton;
     FirebaseAuth mAuth;
     ProgressBar progresbar;
 
@@ -52,7 +54,7 @@ public class registerpage extends AppCompatActivity {
         mAuth =FirebaseAuth.getInstance();
         email= findViewById(R.id.email);
         password= findViewById(R.id.password);
-        butreg= findViewById(R.id.registerbutton);
+        registerbutton= findViewById(R.id.registerbutton);
         login_redirecttext =findViewById(R.id.loginredirecttext);
         progresbar =findViewById(R.id.progressbar);
 
@@ -65,50 +67,47 @@ public class registerpage extends AppCompatActivity {
 
             }
         });
-        butreg.setOnClickListener(new View.OnClickListener() {
+        registerbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-              progresbar.setVisibility(View.VISIBLE);
+                progresbar.setVisibility(View.VISIBLE);
                 String emaill,pass;
-                 emaill=String.valueOf(email.getText());
-                 pass=String.valueOf(password.getText());
+                emaill=String.valueOf(email.getText());
+                pass=String.valueOf(password.getText());
 
                 if(TextUtils .isEmpty(emaill)){
                     Toast.makeText(registerpage.this,"Enter Email",Toast.LENGTH_SHORT).show();
-                              return;
+
                 }
-                if(TextUtils .isEmpty(pass)){
-                    Toast.makeText(registerpage.this,"Enter Password",Toast.LENGTH_SHORT).show();
-                    return;
-                }
+                else{
+                    mAuth.createUserWithEmailAndPassword(emaill, pass)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    progresbar.setVisibility(View.GONE);
+                                    if (task.isSuccessful()) {
 
+                                        //FirebaseUser user = mAuth.getCurrentUser();
+                                        Toast.makeText(registerpage.this, "Account created",
+                                                Toast.LENGTH_SHORT).show();
 
-                mAuth.createUserWithEmailAndPassword(emaill, pass)
-                        .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                progresbar.setVisibility(View.GONE);
-                                if (task.isSuccessful()) {
+                                    } else {
 
-                                    //FirebaseUser user = mAuth.getCurrentUser();
-                                    Toast.makeText(registerpage.this, "Account created",
-                                            Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(registerpage.this, "Authentication failed.",
+                                                Toast.LENGTH_SHORT).show();
 
-                                } else {
-
-                                    Toast.makeText(registerpage.this, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
-
+                                    }
                                 }
-                            }
-                        });
-
-
-
-
+                            });}
 
             }
+
+
+
+
+
+
         });
 
 

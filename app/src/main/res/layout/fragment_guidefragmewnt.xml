@@ -14,4 +14,6 @@
         android:fontFamily="@font/nicomoji"
         android:gravity="center"/>
 
+
+
 </FrameLayout>

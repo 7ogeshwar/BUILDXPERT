@@ -37,6 +37,8 @@ public class guidefragmewnt extends Fragment {
      * @return A new instance of fragment guidefragmewnt.
      */
     // TODO: Rename and change types and number of parameters
+
+
     public static guidefragmewnt newInstance(String param1, String param2) {
         guidefragmewnt fragment = new guidefragmewnt();
         Bundle args = new Bundle();
@@ -61,4 +63,5 @@ public class guidefragmewnt extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_guidefragmewnt, container, false);
     }
+
 }

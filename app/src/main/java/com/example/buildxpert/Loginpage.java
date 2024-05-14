@@ -16,6 +16,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -25,7 +26,7 @@ import java.util.Objects;
 
 public class Loginpage extends AppCompatActivity {
 
-    EditText email, loginpassword;
+    TextInputEditText email, loginpassword;
     Button loginbutton;
     TextView registerredirect;
     FirebaseAuth mAuth;
@@ -71,40 +72,35 @@ public class Loginpage extends AppCompatActivity {
             public void onClick(View view) {
                 progresbar.setVisibility(View.VISIBLE);
 
-                String Email =  email.getText().toString();
-                String password=loginpassword.getText().toString();
+                String Email = String.valueOf(email.getText());
+                String password = String.valueOf(loginpassword.getText());
 
-                if(TextUtils.isEmpty(Email)){
-                    Toast.makeText(Loginpage.this,"Enter Email",Toast.LENGTH_SHORT).show();
-                    return;
+                if (TextUtils.isEmpty(Email)) {
+                    Toast.makeText(Loginpage.this, "Enter Email", Toast.LENGTH_SHORT).show();
                 }
-                if(TextUtils .isEmpty(password)){
-                    Toast.makeText(Loginpage.this,"Enter Password",Toast.LENGTH_SHORT).show();
-                    return;
-                }
+                else {
+                    mAuth.signInWithEmailAndPassword(String.valueOf(email), password)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
 
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    progresbar.setVisibility(View.GONE);
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(getApplicationContext(), "login successful", Toast.LENGTH_SHORT).show();
+                                        Intent intent = new Intent(getApplicationContext(), homepage.class);
+                                        startActivity(intent);
+                                        finish();
 
-                mAuth.signInWithEmailAndPassword(String.valueOf(email), password)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                    } else {
+                                        Toast.makeText(Loginpage.this, "Authentication failed.",
+                                                Toast.LENGTH_SHORT).show();
 
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                progresbar.setVisibility(View.GONE);
-                                if (task.isSuccessful()) {
-                                 Toast.makeText(getApplicationContext(),"login successful",Toast.LENGTH_SHORT).show();
-                                    Intent intent =new Intent(getApplicationContext(),homepage.class);
-                                    startActivity(intent);
-                                    finish();
-
-                                } else {
-                                    Toast.makeText(Loginpage.this, "Authentication failed.",
-                                            Toast.LENGTH_SHORT).show();
-
+                                    }
                                 }
-                            }
-                        });
+                            });
 
 
+                }
             }
         });
 
@@ -116,4 +112,4 @@ public class Loginpage extends AppCompatActivity {
 
 
 
-    }
+}
